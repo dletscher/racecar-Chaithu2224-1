@@ -17,9 +17,9 @@ class Agent:
     
         if velocity==0:
             speed= 'accelerate'
-        elif velocity < 0.15 and center >0.4:
+        elif velocity < 0.3 and center >1:
             speed = 'accelerate'
-        elif (lidar[0]<0.8 or lidar[4]<0.8) or velocity>0.6:
+        elif (lidar[0]<1 or lidar[4]<1) or velocity>0.6:
             speed = 'brake'
         else:
             speed = 'coast'
